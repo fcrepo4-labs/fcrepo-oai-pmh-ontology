@@ -138,7 +138,7 @@
     </xsl:variable>
     <xsl:choose>
       <xsl:when test="$id != ''">
-        <a href="#{$id}">fedora:<xsl:value-of select="$id"/></a>
+        <a href="#{$id}">oaipmh:<xsl:value-of select="$id"/></a>
       </xsl:when>
       <xsl:when test="contains(@rdf:resource,'http://www.w3.org/2001/XMLSchema#')">
         <a href="{@rdf:resource}">xsd:<xsl:value-of select="substring-after(@rdf:resource,'#')"/></a>
@@ -154,7 +154,7 @@
     <div id="{$id}">
       <table>
         <tr>
-          <th colspan="2">fedora:<xsl:value-of select="$id"/></th>
+          <th colspan="2">oaipmh:<xsl:value-of select="$id"/></th>
         </tr>
         <tr class="about">
           <td>URI</td>
