@@ -9,22 +9,24 @@
     <owl:Ontology rdf:about="http://fedora.info/definitions/v4/oai-pmh#">
         <rdfs:label xml:lang="en">Fedora Commons OAI-PMH Ontology</rdfs:label>
         <rdfs:comment xml:lang="en">Describes relationships between Fedora Commons Repository objects used to provide an OAI-PMH service.</rdfs:comment>
-        <owl:versionInfo>v4/2015/03/26</owl:versionInfo>
-        <owl:priorVersion rdf:resource="http://fedora.info/definitions/v4/2014/11/27/oai-pmh"/>
+        <owl:versionInfo>v4/2017/02/17</owl:versionInfo>
+        <owl:priorVersion rdf:resource="http://fedora.info/definitions/v4/2015/03/26/oai-pmh"/>
     </owl:Ontology>
 
     <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/oai-pmh#isPartOfOAISet">
         <rdfs:comment xml:lang="en">Links a Fedora object to an OAI set.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://fcrepo.org/repository#object"/>
-        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#resource"/>
+        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
+        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
     </owl:ObjectProperty>
     <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/oai-pmh#hasOAISet">
         <rdfs:comment xml:lang="en">Adds new OAI Set definitions to a specialized parent object linking to all existing OAI Sets.</rdfs:comment>
-        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#resource"/>
+        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
+        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
     </owl:ObjectProperty>
     <owl:ObjectProperty rdf:about="http://fedora.info/definitions/v4/oai-pmh#hasOaiDCRecord">
         <rdfs:comment xml:lang="en">Links to an oai_dc record emitted for the linked subject.</rdfs:comment>
-        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#resource"/>
+        <rdfs:domain rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
+        <rdfs:range rdf:resource="http://fedora.info/definitions/v4/repository#Resource"/>
     </owl:ObjectProperty>
     <owl:DatatypeProperty rdf:about="http://fedora.info/definitions/v4/oai-pmh#hasOAISetName">
         <rdfs:comment xml:lang="en">The name of an OAI Set.</rdfs:comment>
